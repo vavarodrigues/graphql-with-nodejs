@@ -1,0 +1,15 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: graphql-with-nodejs-deployment
+spec:
+  template:
+    metadata:
+      labels:
+       name: graphql-with-nodejs-pod
+    spec:
+      containers:
+        - name: container-graphql-with-nodejs
+          image: wrasilva/graphql-with-nodejs:latest
+          ports:
+           - containerPort: 5000

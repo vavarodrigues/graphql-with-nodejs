@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: graphql-with-nodejs
+spec:
+  containers:
+    - name: container-graphql-with-nodejs
+      image: wrasilva/graphql-with-nodejs:latest
+      ports:
+        - containerPort: 5000
